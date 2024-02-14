@@ -1,4 +1,5 @@
 import { TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -20,10 +21,11 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('temperature-controller');
   });
 
-  it('should render title', () => {
+  it(`should render the temperature controller component`, () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, temperature-controller');
+    const app = fixture.componentInstance;
+    const element = fixture.debugElement;
+
+    expect(element.query(By.css('.temperature')).children.length).toBe(1);
   });
 });

@@ -1,0 +1,150 @@
+
+$rollValue : "50";
+
+.wrapper {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    top: -15px;
+    background: white;
+  }
+
+  .background {
+    border-radius: 0 0 150px 150px;
+    width: 300px;
+    height: 150px;
+    margin-top: 150px;
+    background: #df3341;
+    background: -moz-linear-gradient(left, #61c0ec 0%, #d4f355 50%, #df3341 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #61c0ec), color-stop(50%, #d4f355), color-stop(100%, #df3341));
+    background: -webkit-linear-gradient(left, #61c0ec 0%, #d4f355 50%, #df3341 100%);
+    background: -o-linear-gradient(left, #61c0ec 0%, #d4f355 50%, #df3341 100%);
+    background: -ms-linear-gradient(left, #61c0ec 0%, #d4f355 50%, #df3341 100%);
+    background: linear-gradient(to right, #61c0ec 0%, #d4f355 50%, #df3341 100%);
+    position: relative;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 1), inset 0 -2px 3px rgba(0, 0, 0, 0.1);
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: -11px;
+      height: 12px;
+      width: 25px;
+      border-radius: 12px 12px 0 0;
+      box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+      background: #df3341;
+      background: -moz-linear-gradient(left, #df3341 0%, #df3341 100%);
+      background: -webkit-gradient(linear, left top, right top, color-stop(0%, #df3341), color-stop(100%, #df3341));
+      background: -webkit-linear-gradient(left, #df3341 0%, #df3341 100%);
+      background: -o-linear-gradient(left, #df3341 0%, #df3341 100%);
+      background: -ms-linear-gradient(left, #df3341 0%, #df3341 100%);
+      background: linear-gradient(to right, #df3341 0%, #df3341 100%);
+      right: 0;
+      left: auto;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: -11px;
+      height: 12px;
+      width: 25px;
+      left: 0;
+      border-radius: 12px 12px 0 0;
+      background: #72c8d5;
+      background: -moz-linear-gradient(left, #72c8d5 0%, #72c8d5 100%);
+      background: -webkit-gradient(linear, left top, right top, color-stop(0%, #72c8d5), color-stop(100%, #72c8d5));
+      background: -webkit-linear-gradient(left, #72c8d5 0%, #72c8d5 100%);
+      background: -o-linear-gradient(left, #72c8d5 0%, #72c8d5 100%);
+      background: -ms-linear-gradient(left, #72c8d5 0%, #72c8d5 100%);
+      background: linear-gradient(to right, #72c8d5 0%, #72c8d5 100%);
+      box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    li {
+      position: absolute;
+      user-select: none;
+      list-style-type: none;
+      &:nth-child(1) {
+        bottom: 40px;
+        right: 0px;
+      }
+
+      &:nth-child(2) {
+        bottom: -20px;
+        left: 48%;
+      }
+
+      &:nth-child(3) {
+        bottom: 40px;
+        left: 10px;
+      }
+    }
+
+    span {
+      position: absolute;
+      display: block;
+    }
+  }
+
+  .mask {
+    background: white;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    user-select: none;
+  }
+
+  .roll {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.1), inset 0 -10px 5px #eaeaea, inset 0 10px 5px #f8f8f7;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    background: #f2f2f2;
+    cursor: pointer;
+    user-select: none;
+    transform: rotate(0deg);
+    transition-duration: 0.8s;
+    transition-property: transform;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: #e94646;
+      border-radius: 50%;
+      display: inline-block;
+      position: absolute;
+      bottom: 10px;
+      left: 100px;
+      box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .min-temp{
+    top: -40px;
+    left: -2px;
+    user-select: none;
+    font-size: 16px;
+  }
+
+  .max-temp {
+    top: -40px;
+    left: auto;
+    right: -2px;
+    user-select: none;
+    font-size: 16px;
+  }
+

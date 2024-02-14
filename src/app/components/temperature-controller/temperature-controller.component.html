@@ -1,0 +1,16 @@
+<div class="temperature wrapper">
+  <div class="background">
+    <div class="mask">
+      <div class="roll" [style]="rotationValue">{{currentValue}}</div>
+    </div>
+    <ul>
+      <li>{{(maxValue + minValue) *(3/4)}}</li>
+      <li>{{(maxValue + minValue) / 2}}</li>
+
+      <li>{{(maxValue + minValue )*(1/4)}}</li>
+    </ul>
+    <span class="min-temp">{{minValue}}</span>
+    <span class="max-temp">{{maxValue}}</span>
+  </div>
+
+</div>
